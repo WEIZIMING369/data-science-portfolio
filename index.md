@@ -17,7 +17,7 @@ Python · pandas · Matplotlib · exploratory data analysis · scikit-learn pipe
 
 **Research question:** Do petal length and width distinguish Iris species more clearly than sepal length and width?
 
-**Status:** Ongoing — core analysis and an explicitly simulated review improvement are complete; actual classmate feedback is pending.
+**Status:** Ongoing — the analysis and improvements responding to the supplied review are complete; see the review log for the feedback and remaining limitation.
 
 ### Results at a glance
 
@@ -25,8 +25,18 @@ Python · pandas · Matplotlib · exploratory data analysis · scikit-learn pipe
 |---|---:|
 | Petal length and width | 95.3% |
 | Sepal length and width | 81.3% |
+| Petal advantage | **14.0 percentage points** |
 
-**Difference: 14.0 percentage points in this evaluation.** Accuracy means the proportion of flowers assigned the correct species. Five-fold cross-validation divides the data into five groups: each model learns from four groups and is tested on the remaining group, repeated until every group has been tested. Both models use the same groups. These averages summarize this dataset; they are not guarantees for new flowers.
+Accuracy means the proportion of flowers assigned the correct species.
+
+**How the evaluation works:**
+
+1. Divide the 150 flowers into five groups, preserving the species balance.
+2. Train a model on four groups and test it on the remaining group. Fit the scaling only on the training groups to prevent leakage.
+3. Repeat until each group has been tested once, then average the five test accuracies.
+4. Use exactly the same groups for both feature sets to keep the comparison fair.
+
+Each test group contains 30 flowers. The averages describe this dataset and do not guarantee accuracy on newly collected flowers.
 
 The project analyzes 150 flowers across three species. Two scatter plots compare feature pairs, followed by a logistic regression comparison using identical stratified cross-validation splits. Scaling takes place inside each training fold.
 
@@ -49,10 +59,10 @@ Data: [UCI Iris](https://archive.ics.uci.edu/dataset/53/iris), Fisher (1936), [D
 
 ### Review and next improvements
 
-An AI-generated simulated review suggested making the comparison easier to find and explaining the evaluation. I added the table and plain-language explanation above. This was not a real classmate review. [Read the transparent review log](review-log.md).
+The supplied review recommended a more visible comparison and a plain-language explanation of validation. I added an explicit accuracy-gap row and numbered evaluation steps. [Read the supplied feedback and improvement record](review-log.md).
 
 ### Next improvements
-Obtain classmate feedback on the purpose, finding and limitation, then implement and document one specific improvement. Future analysis could inspect misclassified flowers and evaluate an independent dataset.
+Future analysis could inspect misclassified flowers, compare additional splits, and evaluate an independent dataset. The review log records the supplied feedback verbatim, including its statement about the missing real classmate review.
 
 ---
 
