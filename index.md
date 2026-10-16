@@ -20,15 +20,15 @@ Python · pandas · Matplotlib · exploratory data analysis · scikit-learn pipe
 **Status:** Ongoing — core analysis and an explicitly simulated review improvement are complete; actual classmate feedback is pending.
 
 ### Results at a glance
-+
-+| Measurements used | Mean accuracy across five folds |
-+|---|---:|
-+| Petal length and width | 95.3% |
-+| Sepal length and width | 81.3% |
-+
-+**Difference: 14.0 percentage points in this evaluation.** Accuracy means the proportion of flowers assigned the correct species. Five-fold cross-validation divides the data into five groups: each model learns from four groups and is tested on the remaining group, repeated until every group has been tested. Both models use the same groups. These averages summarize this dataset; they are not guarantees for new flowers.
-+
-+The project analyzes 150 flowers across three species. Two scatter plots compare feature pairs, followed by a logistic regression comparison using identical stratified cross-validation splits. Scaling takes place inside each training fold.
+
+| Measurements used | Mean accuracy across five folds |
+|---|---:|
+| Petal length and width | 95.3% |
+| Sepal length and width | 81.3% |
+
+**Difference: 14.0 percentage points in this evaluation.** Accuracy means the proportion of flowers assigned the correct species. Five-fold cross-validation divides the data into five groups: each model learns from four groups and is tested on the remaining group, repeated until every group has been tested. Both models use the same groups. These averages summarize this dataset; they are not guarantees for new flowers.
+
+The project analyzes 150 flowers across three species. Two scatter plots compare feature pairs, followed by a logistic regression comparison using identical stratified cross-validation splits. Scaling takes place inside each training fold.
 
 ![Petal length versus width, with species identified by color and marker](petal_scatter.png)
 
@@ -57,4 +57,5 @@ Obtain classmate feedback on the purpose, finding and limitation, then implement
 ---
 
 Prepared for CISC7204 Practice 09 with assistance from OpenAI Codex. Public content contains no student ID or private contact information.
+
 
