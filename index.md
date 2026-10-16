@@ -17,9 +17,18 @@ Python · pandas · Matplotlib · exploratory data analysis · scikit-learn pipe
 
 **Research question:** Do petal length and width distinguish Iris species more clearly than sepal length and width?
 
-**Status:** Ongoing — the core analysis is complete; classmate review and further improvement are pending.
+**Status:** Ongoing — core analysis and an explicitly simulated review improvement are complete; actual classmate feedback is pending.
 
-The project analyzes 150 flowers across three species. Two scatter plots compare feature pairs, followed by a logistic regression comparison using identical stratified cross-validation splits. Scaling takes place inside each training fold.
+### Results at a glance
++
++| Measurements used | Mean accuracy across five folds |
++|---|---:|
++| Petal length and width | 95.3% |
++| Sepal length and width | 81.3% |
++
++**Difference: 14.0 percentage points in this evaluation.** Accuracy means the proportion of flowers assigned the correct species. Five-fold cross-validation divides the data into five groups: each model learns from four groups and is tested on the remaining group, repeated until every group has been tested. Both models use the same groups. These averages summarize this dataset; they are not guarantees for new flowers.
++
++The project analyzes 150 flowers across three species. Two scatter plots compare feature pairs, followed by a logistic regression comparison using identical stratified cross-validation splits. Scaling takes place inside each training fold.
 
 ![Petal length versus width, with species identified by color and marker](petal_scatter.png)
 
@@ -38,9 +47,14 @@ The project analyzes 150 flowers across three species. Two scatter plots compare
 ### Data and reproducibility
 Data: [UCI Iris](https://archive.ics.uci.edu/dataset/53/iris), Fisher (1936), [DOI 10.24432/C56C76](https://doi.org/10.24432/C56C76), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Measurements are in centimetres. The project includes the original source file, pinned Python dependencies and a runnable analysis script.
 
+### Review and next improvements
+
+An AI-generated simulated review suggested making the comparison easier to find and explaining the evaluation. I added the table and plain-language explanation above. This was not a real classmate review. [Read the transparent review log](review-log.md).
+
 ### Next improvements
 Obtain classmate feedback on the purpose, finding and limitation, then implement and document one specific improvement. Future analysis could inspect misclassified flowers and evaluate an independent dataset.
 
 ---
 
 Prepared for CISC7204 Practice 09 with assistance from OpenAI Codex. Public content contains no student ID or private contact information.
+
