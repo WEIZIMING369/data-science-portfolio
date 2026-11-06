@@ -54,12 +54,6 @@ The project analyzes 150 flowers across three species. Two scatter plots compare
 
 [Explore the project code, results and README →](https://github.com/WEIZIMING369/data-science-project)
 
-## Coursework gallery: exercises and assignments
-
-I have also collected my CISC7204 Suggested Exercises 01–10 and Assignment 01–02 in a [coursework repository](https://github.com/WEIZIMING369/CISC7204-MC665213-2026GitHub). The exercises cover Python foundations, data exploration, visualization, and interactive plots. Assignment 01 focuses on data analysis and modelling; Assignment 02 develops data visualization and Dash work. These are course exercises, separate from the Iris project above.
-
-The added exercise and Assignment 01 archives contain source notebooks and supporting data. Their original files remain in my local coursework folder. Suggested Exercise 09 is present from that folder, although its Moodle assignment page shows no uploaded submission.
-
 ### Data and reproducibility
 Data: [UCI Iris](https://archive.ics.uci.edu/dataset/53/iris), Fisher (1936), [DOI 10.24432/C56C76](https://doi.org/10.24432/C56C76), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Measurements are in centimetres. The project includes the original source file, pinned Python dependencies and a runnable analysis script.
 
